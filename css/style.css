@@ -1,0 +1,243 @@
+/* root */
+:root {
+    --color-sideBtncolor: #4681f4;
+    --color-hamBtncolor: #455705;
+    --color-comBtncolor: #5618a8;
+    --color-comBtnHovcolor: #380b72;
+    --color-hamBtnHovcolor: #2d3803;
+    --color-sideBtnHovecolor: #1c4597;
+    --color-navBarhover: #f57059;
+    --color-text: #ffffff;
+    --color-bg: #141414;
+    --color-menuBg: #F2F0EF;
+}
+
+
+/* Default Styles */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+.menuBg {
+    background-color: var(--color-menuBg);
+}
+
+h1 {
+    color: var(--color-navBarhover);
+}
+
+.info {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.info h1 {
+    color: var(--color-navBarhover);
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+
+.selectNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* Styling Buttons */
+
+.sideByside button {
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-sideBtncolor);
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamMenu button {
+  padding: 10px 40px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-hamBtncolor);
+  color: var(--color-text);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.comNav button {
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-comBtncolor);
+    color: var(--color-text);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sideByside button:hover {
+  background: var(--color-sideBtnHovecolor);
+}
+
+
+.hamMenu button:hover {
+  background: var(--color-hamBtnHovcolor);
+}
+
+
+.comNav button:hover {
+    background: var(--color-comBtnHovcolor);
+}
+
+/* Styling Navigation Bar */
+
+.nav ul li a{
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.5 ease;
+}
+  
+  
+ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+  
+  
+.nav ul li{
+    list-style-type: none;
+    font-weight: 500;
+}
+  
+.nav ul li a:hover{
+    color: var(--color-navBarhover);
+}
+
+
+/* Active link */
+nav ul li a.active {
+    color: var(--color-navBarhover);
+}
+  
+.menu-toggle {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    fill: var(--color-navBarhover);
+}
+
+
+/* shared navigstion styles */
+nav {
+    background-color: var(--color-bg);
+    padding: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    display: block;
+}
+
+  /* Side by side navigation*/
+  .nav1 .nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+    .nav1 .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+
+
+
+  /* Humbugar menu navigation */
+.nav2 .menu-toggle {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav2 .nav-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.nav2 .nav-links.active {
+    display: flex;
+}
+
+
+
+
+  /* Combination navigation */
+.nav3 .menu-toggle {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+  .nav3 .nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+    .nav3 .menu-toggle {
+      display: block;
+    }
+
+    .nav3 .nav-links {
+      display: none;
+      flex-direction: column;
+      margin-top: 1rem;
+      align-items: center;
+    }
+
+.nav3 .nav-links.active {
+      display: flex;
+    }
+}
